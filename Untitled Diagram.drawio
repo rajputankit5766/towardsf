@@ -1,0 +1,277 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" version="29.3.7">
+  <diagram name="Page-1" id="LKj1yVbVD5EXOvEsCwm9">
+    <mxGraphModel dx="778" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="M34QYPWpvPmWbHNuottj-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="START" vertex="1">
+          <mxGeometry height="50" width="90" x="120" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="&lt;b&gt;Prerequisites:&lt;/b&gt;&lt;div&gt;1.)&amp;nbsp;Root or sudo privileges (recommended for ownership changes and ACL operations).&lt;/div&gt;&lt;div&gt;2.)&amp;nbsp;Ensure change request/approval is available for production paths.&amp;nbsp;&lt;/div&gt;&lt;div&gt;3.)&amp;nbsp;Take backup of ACL/permission baseline before changes (ls -l / ls -ld / aclget).&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="260" x="35" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-3" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="M34QYPWpvPmWbHNuottj-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="270" as="sourcePoint" />
+            <mxPoint x="430" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-6" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;Identify targets and scope:&lt;/b&gt;&lt;div&gt;1.) Determine file or directory&lt;/div&gt;&lt;div&gt;2.) Determine if recursive changes&lt;/div&gt;&lt;div&gt;are required&lt;/div&gt;&lt;div&gt;3.) change owner and group&lt;/div&gt;&lt;div&gt;4.) check and set umask&lt;/div&gt;&lt;div&gt;5.) Confirm changes needed&lt;/div&gt;&lt;div&gt;(permissions/ownership/&lt;/div&gt;&lt;div&gt;ACL)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="230" width="370" x="55" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-7" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="M34QYPWpvPmWbHNuottj-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="240" />
+              <mxPoint x="240" y="240" />
+            </Array>
+            <mxPoint x="140" y="220" as="sourcePoint" />
+            <mxPoint x="200" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-10" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;changing permissions using:&lt;div&gt;1.) symbolic mode(add/remove)&lt;/div&gt;&lt;div&gt;2.) numeric mode&lt;/div&gt;&lt;div&gt;3.)&amp;nbsp;Set directory permissions&lt;/div&gt;&lt;div&gt;&amp;nbsp;(execute on directory&lt;/div&gt;&lt;div&gt;allows traversal)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="310" x="40" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-11" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-6" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="M34QYPWpvPmWbHNuottj-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="375" />
+              <mxPoint x="20" y="610" />
+            </Array>
+            <mxPoint x="30" y="310" as="sourcePoint" />
+            <mxPoint x="340" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;rotation=90;" value="file and directory" vertex="1">
+          <mxGeometry height="30" width="160" x="-40" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="chmod g+w /app/data/file1 &amp;amp;&amp;amp; chmod o-rwx /app/data/file1 &amp;amp;&amp;amp; ls -l /app/data/file1" vertex="1">
+          <mxGeometry height="60" width="200" x="55" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-14" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-10" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="350" y="740" as="sourcePoint" />
+            <mxPoint x="194" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;rotation=90;" value="symbolic mode" vertex="1">
+          <mxGeometry height="30" width="70" x="140" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="chmod 640 /app/data/file1 &amp;amp;&amp;amp; ls -l /app/data/file1" vertex="1">
+          <mxGeometry height="60" width="120" x="55" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-17" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-10" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="M34QYPWpvPmWbHNuottj-16" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="610" />
+              <mxPoint x="370" y="680" />
+              <mxPoint x="320" y="940" />
+            </Array>
+            <mxPoint x="290" y="640" as="sourcePoint" />
+            <mxPoint x="320" y="940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;rotation=90;" value="numeric mode" vertex="1">
+          <mxGeometry height="30" width="90" x="310" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="chmod 750 /app/data &amp;amp;&amp;amp; ls -ld /app/data" vertex="1">
+          <mxGeometry height="60" width="120" x="55" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-20" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-10" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="M34QYPWpvPmWbHNuottj-19" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="195" y="500" />
+              <mxPoint x="440" y="500" />
+              <mxPoint x="440" y="1040" />
+            </Array>
+            <mxPoint x="380" y="640" as="sourcePoint" />
+            <mxPoint x="440" y="1020" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;div&gt;Set directory permissions&lt;/div&gt;&lt;div&gt;&amp;nbsp;(execute on directory&lt;/div&gt;&lt;div&gt;allows traversal)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="200" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="1.) Check if ACL is enabled (+) and view ACL&lt;div&gt;ls -el /app/data/file1 &amp;amp;&amp;amp; aclget /app/data/file1 | head&lt;/div&gt;&lt;div&gt;2.)&amp;nbsp;Backup ACL and restore/apply to another file&lt;/div&gt;&lt;div&gt;aclget /app/data/file1 &amp;gt; /tmp/file1.acl &amp;amp;&amp;amp; aclput -i /tmp/file1.acl /app/data/file2&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="240" x="480" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-24" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;" value="1.)&amp;nbsp;Change owner and&lt;div&gt;&amp;nbsp; &amp;nbsp; group (ownership)&lt;div&gt;2.)&amp;nbsp;&amp;nbsp;Change only group&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;ownership (chgrp)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="260" x="445" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-25" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-6" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="M34QYPWpvPmWbHNuottj-24" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="375" />
+              <mxPoint x="440" y="320" />
+              <mxPoint x="400" y="320" />
+              <mxPoint x="400" y="280" />
+              <mxPoint x="400" y="135" />
+            </Array>
+            <mxPoint x="380" y="360" as="sourcePoint" />
+            <mxPoint x="430" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;rotation=90;" value="owner and group" vertex="1">
+          <mxGeometry height="30" width="110" x="330" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-28" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="chown appusr:appgrp /app/data/file1 &amp;amp;&amp;amp; ls -l /app/data/file1" vertex="1">
+          <mxGeometry height="60" width="160" x="480" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-29" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-24" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="M34QYPWpvPmWbHNuottj-28" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="240" />
+              <mxPoint x="520" y="240" />
+            </Array>
+            <mxPoint x="380" y="320" as="sourcePoint" />
+            <mxPoint x="430" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-size: 13px;&quot;&gt;Change owner and&lt;/span&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp; &amp;nbsp; group (ownership)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="130" x="500" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="chgrp appgrp /app/data/file1 &amp;amp;&amp;amp; ls -l /app/data/file1" vertex="1">
+          <mxGeometry height="60" width="160" x="620" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-32" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-24" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="135" />
+            </Array>
+            <mxPoint x="390" y="360" as="sourcePoint" />
+            <mxPoint x="720" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;rotation=90;" value="&lt;div&gt;Change only group&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;ownership (chgrp)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="130" x="680" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="umask &amp;amp;&amp;amp; umask 022 &amp;amp;&amp;amp; umask" vertex="1">
+          <mxGeometry height="40" width="200" x="560" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-35" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-6" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="M34QYPWpvPmWbHNuottj-34" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="460" />
+            </Array>
+            <mxPoint x="390" y="550" as="sourcePoint" />
+            <mxPoint x="440" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;span&gt;check and set umask&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="160" x="370" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-37" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-6" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="480" />
+              <mxPoint x="480" y="480" />
+              <mxPoint x="480" y="560" />
+              <mxPoint x="599" y="560" />
+            </Array>
+            <mxPoint x="400" y="670" as="sourcePoint" />
+            <mxPoint x="599" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-38" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="if ACL is enabled" vertex="1">
+          <mxGeometry height="30" width="130" x="470" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-40" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-19" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="M34QYPWpvPmWbHNuottj-48" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="115" y="1160" />
+              <mxPoint x="320" y="1120" />
+            </Array>
+            <mxPoint x="340" y="1030" as="sourcePoint" />
+            <mxPoint x="229.26999999999998" y="1160.6" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-41" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-16" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="M34QYPWpvPmWbHNuottj-48" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="940" />
+              <mxPoint x="40" y="1200" />
+              <mxPoint x="260" y="1160" />
+            </Array>
+            <mxPoint x="370" y="970" as="sourcePoint" />
+            <mxPoint x="230" y="1200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-42" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-13" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="10" y="820" />
+              <mxPoint x="10" y="1240" />
+            </Array>
+            <mxPoint x="280" y="990" as="sourcePoint" />
+            <mxPoint x="230" y="1240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-43" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-23" style="endArrow=classic;html=1;rounded=0;entryX=0.706;entryY=0.202;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.411;exitY=1.004;exitDx=0;exitDy=0;exitPerimeter=0;" target="M34QYPWpvPmWbHNuottj-48" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="1110" />
+            </Array>
+            <mxPoint x="557" y="840" as="sourcePoint" />
+            <mxPoint x="520.175" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-44" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-34" style="endArrow=classic;html=1;rounded=0;exitX=0.88;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.87;entryY=0.369;entryDx=0;entryDy=0;entryPerimeter=0;" target="M34QYPWpvPmWbHNuottj-48" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="1197" />
+              <mxPoint x="600" y="1180" />
+            </Array>
+            <mxPoint x="480" y="590" as="sourcePoint" />
+            <mxPoint x="595.365" y="1197.35" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-45" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-31" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="M34QYPWpvPmWbHNuottj-48" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="360" />
+              <mxPoint x="800" y="1237" />
+            </Array>
+            <mxPoint x="510" y="540" as="sourcePoint" />
+            <mxPoint x="650" y="1237" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-48" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;" value="&lt;b&gt;Verification:&lt;/b&gt;&lt;div&gt;&lt;div&gt;1.) Verify permissions using ls -l and ls -ld and&amp;nbsp;&lt;/div&gt;&lt;div&gt;confirm owner/group/other bits are as per request.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2.) Confirm access by testing with a non-privileged user (read/write/execute as applicable).&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3.) If ACLs used, validate with aclget and confirm&lt;/div&gt;&lt;div&gt;&amp;nbsp;ls -el shows &quot;+&quot; for extended ACL.&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="300" width="410" x="230" y="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-49" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;" value="&lt;b&gt;Rollback&lt;/b&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;:&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;div style=&quot;&quot;&gt;1.) Restore original permissions using saved&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp;baseline values (chmod &amp;lt;mode&amp;gt; &amp;lt;path&amp;gt;).&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;2.) Restore original ownership&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp;(chown &amp;lt;owner&amp;gt;:&amp;lt;group&amp;gt; &amp;lt;path&amp;gt;).&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;3.) If ACLs were changed, re-apply saved&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp;ACL file using aclput -i &amp;lt;saved_acl&amp;gt; &amp;lt;path&amp;gt;.&amp;nbsp;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="450" x="500" y="1320" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-50" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-48" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="M34QYPWpvPmWbHNuottj-49" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="435" y="1445" />
+            </Array>
+            <mxPoint x="410" y="1440" as="sourcePoint" />
+            <mxPoint x="460" y="1390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;rotation=90;" value="failed" vertex="1">
+          <mxGeometry height="30" width="60" x="395" y="1400" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-52" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-49" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;" target="M34QYPWpvPmWbHNuottj-48" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="410" y="1380" as="sourcePoint" />
+            <mxPoint x="460" y="1330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-53" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="END" vertex="1">
+          <mxGeometry height="50" width="90" x="120" y="1390" as="geometry" />
+        </mxCell>
+        <mxCell id="M34QYPWpvPmWbHNuottj-54" edge="1" parent="1" source="M34QYPWpvPmWbHNuottj-48" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="1320" />
+              <mxPoint x="160" y="1320" />
+            </Array>
+            <mxPoint x="410" y="1420" as="sourcePoint" />
+            <mxPoint x="160" y="1390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
