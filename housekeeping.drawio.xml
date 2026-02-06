@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" version="29.3.7">
+  <diagram name="Page-1" id="T5zCkIwNzTQAucg1jNf_">
+    <mxGraphModel dx="778" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="START" vertex="1">
+          <mxGeometry height="50" width="80" x="225" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="prerequisites:&lt;div&gt;1.) Admin access available&lt;/div&gt;&lt;div&gt;2.) Maintenance window approved(if production system)&lt;/div&gt;&lt;div&gt;3.) Log retention requirements confirmed&lt;/div&gt;&lt;div&gt;4.) Backup/restore plan ready&lt;/div&gt;&lt;div&gt;5.) Exclude network mounts(NFS/GPFS)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="260" x="135" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-3" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="e06CuSvgtc9b1N2-t5XK-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="240" as="sourcePoint" />
+            <mxPoint x="430" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="file system housekeeping procedure begins" vertex="1">
+          <mxGeometry height="60" width="120" x="190" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-5" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-2" style="endArrow=classic;html=1;rounded=0;entryX=0.565;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.471;exitY=1.011;exitDx=0;exitDy=0;exitPerimeter=0;" target="e06CuSvgtc9b1N2-t5XK-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="258" y="230" as="sourcePoint" />
+            <mxPoint x="430" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Check filesystem space usage (AIX uses df -g)&lt;div&gt;df -g&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="120" x="190" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-7" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-4" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="e06CuSvgtc9b1N2-t5XK-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="300" as="sourcePoint" />
+            <mxPoint x="430" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Identify filesystems close to full (top offenders)&lt;div&gt;df -g | awk &quot;NR==1 || $4+0&amp;gt;=85&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="160" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-9" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-6" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="e06CuSvgtc9b1N2-t5XK-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="490" as="sourcePoint" />
+            <mxPoint x="430" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="List filesystem definitions and auto-mount settings&lt;div&gt;lsfs -q | head&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="145" x="177.5" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-11" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-8" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="e06CuSvgtc9b1N2-t5XK-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="600" as="sourcePoint" />
+            <mxPoint x="430" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Identify top space-consuming directories (example: /var)&lt;div&gt;du -sk /var/* 2&amp;gt;/dev/null | sort -n | tail -n 10&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="182.5" x="157.5" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-13" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-10" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="640" as="sourcePoint" />
+            <mxPoint x="250" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Find large files (example: &amp;gt;500MB) under a filesystem&lt;div&gt;find /var -xdev -type f -size +1000000 -print 2&amp;gt;/dev/null | head&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="182.5" x="157.5" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-15" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-12" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="e06CuSvgtc9b1N2-t5XK-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="370" y="780" as="sourcePoint" />
+            <mxPoint x="420" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Review AIX error report and error log size (errpt)&lt;div&gt;errpt | head -n 5; ls -lh /var/adm/ras/errlog 2&amp;gt;/dev/null || true&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="160" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-17" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="e06CuSvgtc9b1N2-t5XK-16" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="890" />
+            </Array>
+            <mxPoint x="250" y="850" as="sourcePoint" />
+            <mxPoint x="420" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Archive and clear old AIX error reports (policy-based)&lt;div&gt;errclear 30 &amp;amp;&amp;amp; echo &quot;errpt entries older than 30 days cleared&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="180" x="158.75" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-20" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-16" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="440" y="960" as="sourcePoint" />
+            <mxPoint x="250" y="1010" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Check /var/adm/ras for core dumps and old ras logs&lt;div&gt;ls -lh /var/adm/ras | head&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="160" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-22" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="e06CuSvgtc9b1N2-t5XK-21" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="250" y="1090" as="sourcePoint" />
+            <mxPoint x="490" y="1060" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Remove old core dumps (AFTER confirmation)&lt;div&gt;rm -f /var/adm/ras/core.* 2&amp;gt;/dev/null || true; echo &quot;core cleanup done&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="220" x="470" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-24" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-21" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="e06CuSvgtc9b1N2-t5XK-23" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="1160" />
+              <mxPoint x="440" y="290" />
+            </Array>
+            <mxPoint x="470" y="1130" as="sourcePoint" />
+            <mxPoint x="440" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-25" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Clean /tmp and /var/tmp files older than 7 days (review first)&lt;div&gt;find /tmp /var/tmp -xdev -type f -mtime +7 -print 2&amp;gt;/dev/null | head&lt;/div&gt;" vertex="1">
+          <mxGeometry height="65" width="220" x="470" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-26" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-23" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="e06CuSvgtc9b1N2-t5XK-25" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="490" y="460" as="sourcePoint" />
+            <mxPoint x="540" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Delete /tmp and /var/tmp files older than 7 days (after approval)&lt;div&gt;find /tmp /var/tmp -xdev -type f -mtime +7 -exec rm -f {} \; 2&amp;gt;/dev/null; echo &quot;temp cleanup done&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="470" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-28" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-25" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="e06CuSvgtc9b1N2-t5XK-27" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="510" y="530" as="sourcePoint" />
+            <mxPoint x="560" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Check installed filesets and cleanup install logs (optional)&lt;div&gt;ls -lh /var/adm/sw 2&amp;gt;/dev/null | head || echo &quot;No /var/adm/sw&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="220" x="470" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-30" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-27" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="e06CuSvgtc9b1N2-t5XK-29" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="510" y="610" as="sourcePoint" />
+            <mxPoint x="560" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;Compress rotated logs (if gzip available; else use compress)&lt;div&gt;&lt;div&gt;command -v gzip &amp;gt;/dev/null &amp;amp;&amp;amp; gzip -9 /var/adm/ras/errlog.old 2&amp;gt;/dev/null || compress&lt;/div&gt;&lt;div&gt;/var/adm/ras/errlog.old 2&amp;gt;/dev/null || true;ls -lh /var/adm/ras/errlog.old* 2&amp;gt;/dev/null || true&amp;nbsp;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="300" x="460" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-32" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-29" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="510" y="780" as="sourcePoint" />
+            <mxPoint x="581" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-33" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Verify post-cleanup space status&lt;div&gt;df -g / /usr /var&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="170" x="520" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-35" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-31" style="endArrow=classic;html=1;rounded=0;exitX=0.471;exitY=1.012;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="600" y="850" as="sourcePoint" />
+            <mxPoint x="601" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-37" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;" value="verification?" vertex="1">
+          <mxGeometry height="110" width="140" x="530" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-38" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="e06CuSvgtc9b1N2-t5XK-37" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="600" y="930" as="sourcePoint" />
+            <mxPoint x="560" y="1000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-40" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Rollback" vertex="1">
+          <mxGeometry height="60" width="120" x="670" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-41" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="END" vertex="1">
+          <mxGeometry height="50" width="90" x="460" y="1180" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-42" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-37" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.4;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;" target="e06CuSvgtc9b1N2-t5XK-41" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="496" y="1025" />
+            </Array>
+            <mxPoint x="510" y="1150" as="sourcePoint" />
+            <mxPoint x="560" y="1100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-43" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;rotation=90;" value="successful" vertex="1">
+          <mxGeometry height="30" width="60" x="475" y="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-44" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-37" style="endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="e06CuSvgtc9b1N2-t5XK-40" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="1025" />
+            </Array>
+            <mxPoint x="510" y="1150" as="sourcePoint" />
+            <mxPoint x="560" y="1100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-45" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="unsuccessful" vertex="1">
+          <mxGeometry height="30" width="60" x="680" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="e06CuSvgtc9b1N2-t5XK-46" edge="1" parent="1" source="e06CuSvgtc9b1N2-t5XK-40" style="endArrow=classic;html=1;rounded=0;exitX=0.4;exitY=1.011;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="718" y="1200" />
+            </Array>
+            <mxPoint x="530" y="1190" as="sourcePoint" />
+            <mxPoint x="550" y="1200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
