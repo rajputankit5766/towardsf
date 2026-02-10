@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" version="29.3.8">
+  <diagram name="Page-1" id="YtevgdbxTFM6kMv4_jgt">
+    <mxGraphModel dx="778" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="START" vertex="1">
+          <mxGeometry height="50" width="90" x="290" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="&lt;b&gt;prerequisites:&lt;/b&gt;&lt;div&gt;1.) vCenter reachable&lt;/div&gt;&lt;div&gt;2.) ESXi host connected&lt;/div&gt;&lt;div&gt;3.) permissions available&lt;/div&gt;&lt;div&gt;4.) SSH access to host&lt;/div&gt;&lt;div&gt;5.) Time synchronized across hosts&lt;/div&gt;&lt;div&gt;6.) Knowledge of environment specific alert thresholds&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="360" x="155" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-3" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FwRwMiIjLzY-5CvIHop6-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="270" as="sourcePoint" />
+            <mxPoint x="430" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-4" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;" value="&lt;div&gt;which way we are using to&lt;/div&gt;check Alarms on ESXi host?" vertex="1">
+          <mxGeometry height="170" width="180" x="250" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-5" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FwRwMiIjLzY-5CvIHop6-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="340" y="210" as="sourcePoint" />
+            <mxPoint x="430" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-6" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-4" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.782;entryY=0.01;entryDx=0;entryDy=0;entryPerimeter=0;" target="FwRwMiIjLzY-5CvIHop6-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="602" y="335" />
+            </Array>
+            <mxPoint x="380" y="460" as="sourcePoint" />
+            <mxPoint x="600" y="406" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-7" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-4" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="335" />
+            </Array>
+            <mxPoint x="160" y="500" as="sourcePoint" />
+            <mxPoint x="80" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="1.) open vCenter&lt;div&gt;2.) Navigate to:&lt;/div&gt;&lt;div&gt;Hosts and clusters--&amp;gt; select ESXi Host--&amp;gt;summary tab&lt;/div&gt;&lt;div&gt;3.) check Alarms section:&lt;/div&gt;&lt;div&gt;3.a) Identify Critical(Red)&lt;/div&gt;&lt;div&gt;3.b) Identify Warning(Yellow)&lt;/div&gt;&lt;div&gt;4.) Expand each alarm to review:&lt;/div&gt;&lt;div&gt;4.a) Description&lt;/div&gt;&lt;div&gt;4.b) Trigger condition&lt;/div&gt;&lt;div&gt;4.c) Impact&lt;/div&gt;&lt;div&gt;4.d) Suggested resolution&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="260" x="400" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-9" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;" value="Alarms visible on summary?" vertex="1">
+          <mxGeometry height="150" width="190" x="425" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-10" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-8" style="endArrow=classic;html=1;rounded=0;exitX=0.459;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FwRwMiIjLzY-5CvIHop6-9" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="370" y="740" as="sourcePoint" />
+            <mxPoint x="420" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="check via vCenter GUI(primary)" vertex="1">
+          <mxGeometry height="30" width="230" x="405" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="check via CLI" vertex="1">
+          <mxGeometry height="30" width="220" x="40" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="1.) view system health status&lt;div&gt;2.)&amp;nbsp; check network health&lt;/div&gt;&lt;div&gt;3.) verify storage device status&lt;/div&gt;&lt;div&gt;4.) review system logs for alert details&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="210" x="30" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-17" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-9" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.006;entryY=0.415;entryDx=0;entryDy=0;entryPerimeter=0;" target="FwRwMiIjLzY-5CvIHop6-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="725" />
+              <mxPoint x="320" y="477" />
+            </Array>
+            <mxPoint x="300" y="700" as="sourcePoint" />
+            <mxPoint x="240" y="475" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="No" vertex="1">
+          <mxGeometry height="30" width="60" x="250" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-19" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-9" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="300" y="850" as="sourcePoint" />
+            <mxPoint x="520" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="Yes" vertex="1">
+          <mxGeometry height="30" width="60" x="510" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="check detailed alarm list" vertex="1">
+          <mxGeometry height="60" width="120" x="460" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="review detailed alarm list" vertex="1">
+          <mxGeometry height="60" width="120" x="460" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-23" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-21" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FwRwMiIjLzY-5CvIHop6-22" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="1030" as="sourcePoint" />
+            <mxPoint x="530" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="check for historical alarms(optional)" vertex="1">
+          <mxGeometry height="60" width="120" x="460" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-25" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-22" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FwRwMiIjLzY-5CvIHop6-24" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="1010" as="sourcePoint" />
+            <mxPoint x="380" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-26" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;" value="active alarms found?" vertex="1">
+          <mxGeometry height="120" width="150" x="60" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-27" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-40" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="FwRwMiIjLzY-5CvIHop6-26" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="1195" />
+              <mxPoint x="280" y="660" />
+            </Array>
+            <mxPoint x="340" y="1040" as="sourcePoint" />
+            <mxPoint x="280" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-28" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-14" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FwRwMiIjLzY-5CvIHop6-26" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="270" y="700" as="sourcePoint" />
+            <mxPoint x="320" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Investigate and troubleshoot via GUI/CLI/PowerCLI" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-30" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-26" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.444;entryY=-0.022;entryDx=0;entryDy=0;entryPerimeter=0;" target="FwRwMiIjLzY-5CvIHop6-29" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="660" />
+              <mxPoint x="40" y="730" />
+              <mxPoint x="93" y="730" />
+            </Array>
+            <mxPoint x="250" y="750" as="sourcePoint" />
+            <mxPoint x="300" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="Yes" vertex="1">
+          <mxGeometry height="30" width="60" x="30" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-32" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="validation and verification" vertex="1">
+          <mxGeometry height="60" width="120" x="120" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-33" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-26" style="endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="730" />
+            </Array>
+            <mxPoint x="180" y="690" as="sourcePoint" />
+            <mxPoint x="210" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="No" vertex="1">
+          <mxGeometry height="30" width="60" x="190" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-35" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-29" style="endArrow=classic;html=1;rounded=0;exitX=0.822;exitY=1.022;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="250" y="960" as="sourcePoint" />
+            <mxPoint x="140" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-36" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="update ITSM and Notify Teams" vertex="1">
+          <mxGeometry height="60" width="120" x="120" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-37" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-32" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FwRwMiIjLzY-5CvIHop6-36" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="250" y="1070" as="sourcePoint" />
+            <mxPoint x="300" y="1020" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-38" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="END" vertex="1">
+          <mxGeometry height="50" width="90" x="135" y="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-39" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-36" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FwRwMiIjLzY-5CvIHop6-38" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="190" y="1200" as="sourcePoint" />
+            <mxPoint x="240" y="1150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-40" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Review historical alarms" vertex="1">
+          <mxGeometry height="60" width="120" x="460" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="FwRwMiIjLzY-5CvIHop6-41" edge="1" parent="1" source="FwRwMiIjLzY-5CvIHop6-24" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FwRwMiIjLzY-5CvIHop6-40" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="1200" as="sourcePoint" />
+            <mxPoint x="380" y="1150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
